@@ -146,9 +146,6 @@ footer h3.w3-text-cyan {
         margin-left: 70px !important;
     }
 
-    .w3-side
-
-
 /* ===============================
    Cards
 =================================*/
@@ -304,32 +301,50 @@ ul.w3-ul li:hover {
 }
 
 /* ===============================
-   CORREÇÃO FINAL – MOBILE
-   (coloque no FINAL do estilo.css)
+   MOBILE FIX – FUNCIONA MESMO
 =================================*/
 
 @media (max-width: 700px) {
 
-    /* Esconde APENAS o sidebar do desktop */
+    /* Esconde APENAS o sidebar de desktop */
     .sidebar-fixed {
         display: none !important;
         width: 0 !important;
         overflow: hidden !important;
     }
 
-    /* Mantém o mobileMenu escondido só até ser aberto pelo botão */
+    /* Esconde qualquer sidebar que NÃO seja o mobileMenu */
     nav.w3-sidebar:not(#mobileMenu) {
         display: none !important;
         width: 0 !important;
         overflow: hidden !important;
     }
 
-    /* Conteúdo ocupa a tela toda */
+    /* Área de conteúdo ocupa a tela toda */
     #main {
         margin-left: 0 !important;
         padding: 12px !important;
     }
+
+    /* Assegura que o mobileMenu apareça quando habilitado via JS */
+    #mobileMenu {
+        display: none;
+        width: 70% !important;
+        background: #8c6a3c !important;
+        border-right: 1px solid #72542b !important;
+        z-index: 99999 !important;
+    }
+
+    #mobileMenu .w3-bar-item,
+    #mobileMenu i {
+        color: #f9f6f0 !important;
+    }
+
+    #mobileMenu .w3-button:hover {
+        background-color: #72542b !important;
+    }
 }
+
 
 /* ===============================
    ESTILO DO MENU MOBILE
@@ -355,6 +370,7 @@ ul.w3-ul li:hover {
 #mobileMenu .w3-button:hover {
     background-color: #72542b !important;
 }
+
 
 
 
