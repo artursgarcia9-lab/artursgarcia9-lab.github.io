@@ -12,6 +12,14 @@
     <body>
         
         <!-- Sidebar -->
+        <!-- Botão Mobile -->
+        <div class="w3-hide-large w3-hide-medium w3-black w3-padding-small" style="position:fixed; width:100%; z-index:999;">
+            <button class="w3-button w3-black" onclick="document.getElementById('mobileMenu').style.display='block'">
+                <i class="fa fa-bars w3-xlarge"></i>
+            </button>
+            <span class="w3-text-cyan" style="font-size:20px; margin-left:10px;">MENU</span>
+        </div>
+
         <nav class="w3-sidebar w3-bar-block w3-center sidebar-fixed">
 
             <a href="index.html" class="w3-bar-item w3-button w3-hover-black w3-text-cyan">
@@ -42,6 +50,19 @@
             <a href="ascetismo.html" class="w3-bar-item w3-button w3-hover-black w3-text-cyan">
                 <i class="fa fa-fire w3-xxlarge"></i><p>IDEAL ASCÉTICO</p>
             </a>
+        </nav>
+
+        <!-- Sidebar Mobile -->
+        <nav id="mobileMenu" class="w3-sidebar w3-bar-block w3-black w3-animate-left w3-hide-large w3-hide-medium" style="display:none; width:70%; z-index:9999;">
+            <button onclick="this.parentElement.style.display='none'" class="w3-button w3-black w3-right w3-large">×</button>
+        
+            <a href="index.html" class="w3-bar-item w3-button w3-text-cyan"><i class="fa fa-home"></i> HOME</a>
+            <a href="memoria.html" class="w3-bar-item w3-button w3-text-cyan"><i class="fa fa-history"></i> LEMBRANÇA PELA DOR</a>
+            <a href="punicao.html" class="w3-bar-item w3-button w3-text-cyan"><i class="fa fa-gavel"></i> PUNIÇÃO</a>
+            <a href="rebeliao.html" class="w3-bar-item w3-button w3-text-cyan"><i class="fa fa-bolt"></i> REBELIÃO</a>
+            <a href="degradacao.html" class="w3-bar-item w3-button w3-text-cyan"><i class="fa fa-exclamation-triangle"></i> DEGRADAÇÃO</a>
+            <a href="bemal.html" class="w3-bar-item w3-button w3-text-cyan"><i class="fa fa-balance-scale"></i> BEM E MAL</a>
+            <a href="ideal_ascetico.html" class="w3-bar-item w3-button w3-text-cyan"><i class="fa fa-fire"></i> IDEAL ASCÉTICO</a>
         </nav>
 
         <!-- Conteúdo -->
@@ -91,4 +112,5 @@
             </div>
         </div>
     </body>
+
 </html>
