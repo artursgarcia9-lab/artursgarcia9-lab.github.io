@@ -308,18 +308,23 @@ ul.w3-ul li:hover {
    (coloque no FINAL do estilo.css)
 =================================*/
 
-/* Esconder COMPLETAMENTE o sidebar desktop no mobile */
 @media (max-width: 700px) {
 
-    /* some totalmente */
-    .w3-sidebar,
+    /* Esconde APENAS o sidebar do desktop */
     .sidebar-fixed {
         display: none !important;
         width: 0 !important;
         overflow: hidden !important;
     }
 
-    /* conteúdo ocupa tela inteira */
+    /* Mantém o mobileMenu escondido só até ser aberto pelo botão */
+    nav.w3-sidebar:not(#mobileMenu) {
+        display: none !important;
+        width: 0 !important;
+        overflow: hidden !important;
+    }
+
+    /* Conteúdo ocupa a tela toda */
     #main {
         margin-left: 0 !important;
         padding: 12px !important;
@@ -350,6 +355,7 @@ ul.w3-ul li:hover {
 #mobileMenu .w3-button:hover {
     background-color: #72542b !important;
 }
+
 
 
 
