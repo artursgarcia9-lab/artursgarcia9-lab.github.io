@@ -303,3 +303,53 @@ ul.w3-ul li:hover {
     color: #f9f6f0 !important;
 }
 
+/* ===============================
+   CORREÇÃO FINAL – MOBILE
+   (coloque no FINAL do estilo.css)
+=================================*/
+
+/* Esconder COMPLETAMENTE o sidebar desktop no mobile */
+@media (max-width: 700px) {
+
+    /* some totalmente */
+    .w3-sidebar,
+    .sidebar-fixed {
+        display: none !important;
+        width: 0 !important;
+        overflow: hidden !important;
+    }
+
+    /* conteúdo ocupa tela inteira */
+    #main {
+        margin-left: 0 !important;
+        padding: 12px !important;
+    }
+}
+
+/* ===============================
+   ESTILO DO MENU MOBILE
+=================================*/
+
+/* Mesma cor do sidebar grande */
+#mobileMenu {
+    background: #8c6a3c !important;   /* sua cor */
+    border-right: 1px solid #72542b !important;
+    color: #f9f6f0 !important;
+}
+
+/* Ícones dentro do mobile menu */
+#mobileMenu i {
+    color: #f9f6f0 !important;
+}
+
+/* Texto dos itens */
+#mobileMenu .w3-bar-item {
+    color: #f9f6f0 !important;
+}
+
+#mobileMenu .w3-button:hover {
+    background-color: #72542b !important;
+}
+
+
+
