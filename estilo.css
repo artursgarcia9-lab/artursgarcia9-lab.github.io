@@ -56,10 +56,10 @@ footer h3.w3-text-cyan {
 }
 
 /* ===============================
-   Sidebar
+   Sidebar Desktop / Tablet
 =================================*/
 
-/* Sidebar sempre visível e fixo */
+/* Sidebar fixo clássico */
 .sidebar-fixed {
     width: 180px;
     position: fixed;
@@ -70,28 +70,13 @@ footer h3.w3-text-cyan {
     overflow-y: auto;
 }
 
-/* Conteúdo deslocado corretamente */
-.content {
+/* Conteúdo ao lado do sidebar */
+#main {
     margin-left: 180px;
     padding: 20px;
 }
 
-/* Modo compacto (telas pequenas) */
-@media (max-width: 700px) {
-    .sidebar-fixed {
-        width: 70px;
-    }
-
-    .sidebar-fixed p {
-        display: none;
-    }
-
-    .content {
-        margin-left: 70px; /* mesma largura do sidebar */
-    }
-}
-
-
+/* Sidebar estético W3 */
 .w3-sidebar {
     width: 120px;
     background: #8c6a3c;
@@ -141,6 +126,28 @@ footer h3.w3-text-cyan {
 .w3-sidebar:hover .w3-bar-item p {
     display: inline;
 }
+
+/* ===============================
+   Responsividade Real
+=================================*/
+
+/* TELAS MÉDIAS (tablets) — sidebar compacto automático */
+@media (max-width: 1000px) {
+
+    .w3-sidebar {
+        width: 70px;
+    }
+
+    .w3-sidebar:hover {
+        width: 140px;
+    }
+
+    #main {
+        margin-left: 70px !important;
+    }
+
+    .w3-side
+
 
 /* ===============================
    Cards
@@ -295,3 +302,4 @@ ul.w3-ul li:hover {
     background-color: #72542b !important;
     color: #f9f6f0 !important;
 }
+
